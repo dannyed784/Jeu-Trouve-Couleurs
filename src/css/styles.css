@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  color: #fff;
+  line-height: 4;
+  font-size: 24px;
+  border-radius: 50px;
+  margin: 10px;
+  cursor: pointer;
+  border: 1px solid goldenrod;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.red {
+  background-color: red;
+}
+
+.hidden {
+  background-color: #000;
+}
+
+.game-container {
+  width: 50%;
+  margin: 100px auto;
+  text-align: center;
+  background-color: #ccc;
+}
+
+.circles-container {
+  background-color: #cfcf;
+  display: flex;
+  justify-content: center;
+}
+
+.selection-container {
+  background-color: #f9825c;
+  display: flex;
+  justify-content: center;
+}
+
+.buttons-container {
+  background-color: aquamarine;
+}
+
+button {
+  cursor: pointer;
+}
+
+#verify-btn {
+  width: 80px;
+  padding: 10px;
+  text-transform: uppercase;
+  background-color: #5039f6;
+  color: #e4e4e4;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
+#reset-btn {
+  width: 150px;
+  padding: 10px;
+  text-transform: uppercase;
+  background-color: #eb3232;
+  color: #e4e4e4;
+  font-weight: bold;
+  letter-spacing: 1px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
