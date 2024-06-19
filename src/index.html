@@ -16,25 +16,27 @@
   </head>
   <body>
     <div class="game-container">
+      <h2>Jeu Trouve-Couleurs</h2>
       <div class="circles-container">
         <!--les cercles caches-->
-        <div class="circle hidden">?</div>
-        <div class="circle hidden">?</div>
-        <div class="circle hidden">?</div>
+        <div class="circle hidden" id="circle-1">?</div>
+        <div class="circle hidden" id="circle-2">?</div>
+        <div class="circle hidden" id="circle-3">?</div>
       </div>
       <div class="selection-container">
+        <!-- <h3>Chosisez votre 3 couleurs</h3> -->
         <!--les cercles de selection du jouer-->
-        <div class="circle blue"></div>
-        <div class="circle yellow"></div>
-        <div class="circle red"></div>
+        <div class="circle blue" id="circle-4"></div>
+        <div class="circle yellow" id="circle-5"></div>
+        <div class="circle red" id="circle-6"></div>
       </div>
       <div class="buttons-container">
         <button id="verify-btn">Verifier</button>
-        <button id="reset-btn">Reinitialiser</button>
+        <button id="commencer-btn">Commencer</button>
         <div id="attempts">Tentatives restantes: 5</div>
       </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
