@@ -8,6 +8,7 @@ const buttonVerifier = document.querySelector('#verify-btn');
 const buttonCommencer = document.querySelector('#commencer-btn');
 const circlesCaches = document.querySelector('.circles-container');
 const attemtps = document.querySelector('#attempts');
+let tentatives = 5;
 
 console.log(circlesCaches.children);
 
@@ -111,9 +112,14 @@ buttonVerifier.addEventListener('click', () => {
     circleCache3.style.backgroundColor === circle6.style.backgroundColor
   ) {
     console.log('you winn');
-    attemtps.textContent = 'you win';
+    attemtps.textContent = 'you win 😊👍';
   } else {
-    console.log('you lose');
+    // console.log('you lose');
+    tentatives--;
+    attemtps.textContent = 'Tentatives restantes: ' + tentatives;
+    if (tentatives <= 0) {
+      attemtps.textContent = 'Tu es perdu le jeu 😢';
+    }
   }
 });
 
@@ -124,4 +130,6 @@ buttonCommencer.addEventListener('click', () => {
   circleCache2.textContent = '?';
   circleCache3.style.backgroundColor = 'black';
   circleCache3.textContent = '?';
+  tentatives = 5;
+  attemtps.textContent = 'TENTATIVES RESTANTES: ' + tentatives;
 });
