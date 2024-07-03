@@ -8,6 +8,7 @@ const buttonVerifier = document.querySelector('#verify-btn');
 const buttonCommencer = document.querySelector('#commencer-btn');
 const circlesCaches = document.querySelector('.circles-container');
 const attemtps = document.querySelector('#attempts');
+const circlesCorrect = document.querySelector('#correct');
 let tentatives = 5;
 
 console.log(circlesCaches.children);
@@ -120,6 +121,7 @@ buttonVerifier.addEventListener('click', () => {
     if (tentatives <= 0) {
       attemtps.textContent = 'Tu es perdu le jeu 😢';
     }
+    verifierColeurs();
   }
 });
 
@@ -132,4 +134,22 @@ buttonCommencer.addEventListener('click', () => {
   circleCache3.textContent = '?';
   tentatives = 5;
   attemtps.textContent = 'TENTATIVES RESTANTES: ' + tentatives;
+  circlesCorrect.textContent = 'correct: 0';
 });
+
+function verifierColeurs() {
+  let correctCount = 0;
+
+  if (circleCache1.style.backgroundColor === circle4.style.backgroundColor) {
+    correctCount++;
+  }
+  if (circleCache2.style.backgroundColor === circle5.style.backgroundColor) {
+    correctCount++;
+  }
+  if (circleCache3.style.backgroundColor === circle6.style.backgroundColor) {
+    correctCount++;
+  }
+
+  // document.getElementById('correct').textContent = 'correct: ' + correctCount;
+  circlesCorrect.textContent = 'correct: ' + correctCount;
+}
